@@ -45,7 +45,7 @@ metadata:
   name: nodejsapp-ingress
   namespace: nodeapps-namespace
   annotations:
-    kubernetes.io/ingress.class: addon-http-application-routing
+    kubernetes.io/ingress.class: addon-http-application-routing-nginx-ingress
 spec:
   rules:
   - host: nodejsapp.mysamplek8scluster-dns-256ad92b.hcp.centralindia.azmk8s.io
