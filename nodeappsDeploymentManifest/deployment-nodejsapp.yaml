@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: nodejsapp
-        image: nodejsapp:appversion
+        image: mysimpleapprepo.azurecr.io/nodejsapp:appversion
         ports:
         - containerPort: 3000
