@@ -44,7 +44,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: default-http-backend
-  namespace: nodeapps-namespace
   annotations:
     kubernetes.io/ingress.class: azure/application-gateway
 spec:
