@@ -19,7 +19,7 @@ spec:
       - name: nodejsapp
         image: mysimpleapprepo.azurecr.io/nodejsapp:appversion
         ports:
-        - containerPort: 3000
+        - containerPort: 80
         
 ---
 
@@ -33,8 +33,8 @@ spec:
     app: nodejs
   ports:
   - protocol: TCP
-    port: 3000
-    targetPort: 3000
+    port: 80
+    targetPort: 80
   externalTrafficPolicy: Local
   type: LoadBalancer
 
@@ -44,6 +44,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: default-http-backend
+  namespace: nodeapps-namespace
   annotations:
     kubernetes.io/ingress.class: azure/application-gateway
 spec:
