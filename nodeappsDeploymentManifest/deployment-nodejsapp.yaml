@@ -45,13 +45,11 @@ metadata:
   name: nodejsapp-ingress
   namespace: nodeapps-namespace
   annotations:
-    kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/use-regex: "true"
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    kubernetes.io/ingress.class: addon-http-application-routing
 spec:
   rules:
-  - http:
+  - host: nodejsapp.mysamplek8scluster-dns-256ad92b.hcp.centralindia.azmk8s.io
+    http:
       paths:
       - path: /
         pathType: Prefix
