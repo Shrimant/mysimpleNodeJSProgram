@@ -57,4 +57,4 @@ spec:
           service:
             name: nodejsapp
             port:
-              number: 80
+              number: 3000
